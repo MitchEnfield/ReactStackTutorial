@@ -1,6 +1,6 @@
 import React from 'react';
 import {PropTypes} from 'prop-types'
-import { Form, Button, Input, Label, Message } from 'semantic-ui-react';
+import { Form, Button, Input, Message } from 'semantic-ui-react';
 import Validator from 'validator';
 import InlineError from '../Messages/InlineError';
 

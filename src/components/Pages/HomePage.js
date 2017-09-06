@@ -2,13 +2,14 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux';
-import * as actions from '../../actions/auth'
+import * as actions from '../../actions/auth';
+import { Button } from 'semantic-ui-react';
 
 const HomePage = ({ isAuthenticated, logout }) => {
   return (
     <div>
       <h1>Home Page</h1>
-      { isAuthenticated ? <button onClick={ () => logout() }>Logout</button> : <Link to='/login'><strong>Login</strong></Link> }
+      { isAuthenticated ? <Button secondary onClick={ () => logout() }>Logout</Button> : <Link to='/Login'><Button primary>Login</Button></Link> }
     </div>
   )
 }
