@@ -36,8 +36,10 @@ class SignupForm extends React.Component {
   validate = data => {
     const errors = {};
 
-    if(!isEmail(data.email)) errors.email = "invalid email";
+    if(!isEmail(data.email)) errors.email = "Invalid email";
     if(!data.password) errors.password = "Can't be blank";
+
+    return errors
   }
 
   render () {
