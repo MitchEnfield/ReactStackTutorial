@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 import { Form, Button, Message } from 'semantic-ui-react';
-import isEmail from 'validator/lib/isEmail';
 import InlineError from '../Messages/InlineError';
 
 class ResetPasswordForm extends React.Component {
