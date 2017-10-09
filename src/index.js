@@ -10,8 +10,9 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import rootReducer from './rootReducer'
-import { userLoggedIn } from './actions/auth'
+import rootReducer from './rootReducer';
+import { userLoggedIn } from './actions/auth';
+import setAuthorizationHeader from './utils/setAuthorizationHeader';
 
 const store = createStore(
   rootReducer,
@@ -25,6 +26,7 @@ if(localStorage.bookwormJWT){
     email: payload.email,
     confirmed: payload.confirmed
   };
+  setAuthorizationHeader(localStorage.bookwormJWT)
   store.dispatch(userLoggedIn(user));
 }
 
